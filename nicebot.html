@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Chatbuilder</title>
+    <script src="http://chatbuilder.hackreactor.com/ChatBuilder.js"></script>
+ 
+
+    <script>
+    
+
+     $(document).ready(function (){
+     
+     function getUserName(input) {
+          return decodeURIComponent(
+          
+          location.search); 
+     
+     
+     }
+     
+     var username=getUserName('').substring(12); 
+     
+     var display=(function(a) {
+     
+     chatmsg=$('ul.messages')
+     chatmsg.append("<li>" + a + "</li>"); 
+     
+     });
+
+
+     
+     $('button.send').click(function () {//item inside click method is a callback function
+     
+     var set_text=$('.draft').val(); 
+     var c=set_text.split(" ")
+     console.log(set_text)
+     var send_text=(username + ':' + set_text); 
+    
+        display(send_text); 
+
+        if (set_text.toUpperCase()==="HELLO" || set_text.toUpperCase()==="HI"  ){
+    //var r=Math.floor(Math.random(0)*3+1);
+    //if(r===1){
+       setTimeout(function() {
+        display("Nicebot:Hi!");
+       display("Nicebot: What's up");
+
+       },2000)
+
+       } 
+       
+    for(var i=0; i<c.length;i++){
+    if(c[i].toUpperCase()==="NOTHING" || c[i].toUpperCase()==="SCHOOL" || c[i].toUpperCase()==="STUFF" ){
+        var h=c[i]
+    setTimeout(function() {
+        display("Nicebot: oh " + h+  " is cool");
+    },2000)
+     }
+
+
+     else if (c[i].toUpperCase()==="HOLA" ){
+        var h=c[i]
+    setTimeout(function() {
+        display("Nicebot: No habla espanol. Adios. Tienes un buena dia.");
+    },2000)
+     }
+    
+
+    else if (c[i].toUpperCase()==="WHATS GOOD" || c[i].toUpperCase()==="WHAT'S GOOD" || c[i].toUpperCase()==="AYO" || c[i].toUpperCase()==="WHAT UP" ){
+        var h=c[i]
+    setTimeout(function() {
+        display("I AM SHAKESPHEAR!!! I AM WALT DISNEY!! I AM DAVINCI!! BEETHOVEN! GOD!! I AM GOD!! I HAVE THE POTENTIAL, SO WHO'S GOING TO INVEST IN ME, AN LET ME CHANGE THE WORLD????.");
+    },2000)
+     }
+   
+
+    else if (c[i].toUpperCase()==="ROBOT?" || c[i].toUpperCase()==="COMPUTER?" ){
+        var h=c[i]
+    setTimeout(function() {
+        display("what do you think?.");
+    },2000)
+     }
+
+    else if (c[i].toUpperCase()==="ROBOT?" || c[i].toUpperCase()==="COMPUTER?" ){
+        var h=c[i]
+    setTimeout(function() {
+        display("what do you think?.");
+    },2000)
+     }
+
+
+    else if (c[i].toUpperCase()==="TYBG" ){
+        var h=c[i]
+    setTimeout(function() {
+        display(":^)");
+    },2000)
+     }
+  
+
+    else if (c[i].toUpperCase()==="2X2" || c[i].toUpperCase()==="2+2" ){
+        var h=c[i]
+    setTimeout(function() {
+        display("4");
+    },2000)
+     }
+   
+
+    else if (c[i].toUpperCase()==="MELTDOWN" ){
+        var h=c[i]
+    setTimeout(function() {
+        display("I can talk you downt from the edge");
+    },2000)
+     }
+  
+
+    else if (c[i].toUpperCase()==="REALLY?"){
+        var h=c[i]
+    setTimeout(function() {
+        display("only on sunday");
+    },2000)
+     }
+    
+    else if (c[i].toUpperCase()==="AWW"){
+        var h=c[i]
+    setTimeout(function() {
+        display("What's going on?");
+    },2000)
+     }
+    
+else if (c[i].toUpperCase()==="YEAH"){
+        var h=c[i]
+    setTimeout(function() {
+        display("You are an incredible conversationalist... but i've had about enough. Goodbye.");
+    },2000)
+     }
+
+else if (c[i].toUpperCase()==="36?"){
+        var h=c[i]
+    setTimeout(function() {
+        display("6");
+    },2000)
+     }
+
+else if (c[i].toUpperCase()==="SATURN?"){
+        var h=c[i]
+    setTimeout(function() {
+        display("About 95 times the mass of the earth");
+    },2000)
+     }
+   }
+       
+    
+    })   
+
+ }) 
+    </script>
+     </head>
+  <body background="rainbow.jpg">
+    <center>
+    <div id="title">NiceBot</div>
+    <br>
+    <img src="sun.jpg" width="350px" height="400px">
+    <br>
+    
+</div>
+    <br>
+    </center>
+    <div id="chat">
+    <input class="draft" type="text" /> <button class="send" >enter</button>
+
+    <h1><ul class="messages" style="color:white">
+    Let's Chat! 
+    </ul></h1>
+    <br>
+</div>
+
+  </body>
+</html>
